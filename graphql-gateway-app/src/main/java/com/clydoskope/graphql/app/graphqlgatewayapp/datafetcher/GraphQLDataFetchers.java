@@ -48,6 +48,11 @@ public class GraphQLDataFetchers {
     };
   }
 
+  public DataFetcher getAllBooks() {
+    return dataFetchingEnvironment -> books
+        .stream().toArray();
+  }
+
   public DataFetcher getAuthorDataFetcher() {
     return dataFetchingEnvironment -> {
       Map<String, String> book = dataFetchingEnvironment.getSource();

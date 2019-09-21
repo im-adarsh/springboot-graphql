@@ -47,16 +47,6 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>com.graphql-java</groupId>
-      <artifactId>graphql-java</artifactId>
-      <version>12.0</version>
-    </dependency>
-    <dependency>
-      <groupId>com.graphql-java</groupId>
-      <artifactId>graphql-java-spring-boot-starter-webmvc</artifactId>
-      <version>1.0</version>
-    </dependency>
-    <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
       <version>28.1-jre</version>
@@ -70,6 +60,39 @@
       <groupId>com.clydoskope.graphql</groupId>
       <artifactId>graphql-gateway-provider</artifactId>
       <version>${project.version}</version>
+    </dependency>
+
+
+    <!-- to embed Altair tool -->
+    <dependency>
+      <groupId>com.graphql-java-kickstart</groupId>
+      <artifactId>altair-spring-boot-starter</artifactId>
+      <version>5.10.0</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <!-- to embed GraphiQL tool -->
+    <dependency>
+      <groupId>com.graphql-java-kickstart</groupId>
+      <artifactId>graphiql-spring-boot-starter</artifactId>
+      <version>5.10.0</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <!-- to embed Voyager tool -->
+    <dependency>
+      <groupId>com.graphql-java-kickstart</groupId>
+      <artifactId>voyager-spring-boot-starter</artifactId>
+      <version>5.10.0</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <!-- testing facilities -->
+    <dependency>
+      <groupId>com.graphql-java-kickstart</groupId>
+      <artifactId>graphql-spring-boot-starter-test</artifactId>
+      <version>5.10.0</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 

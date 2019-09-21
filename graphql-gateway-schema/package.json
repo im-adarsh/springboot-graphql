@@ -1,0 +1,11 @@
+{
+  "name": "graphql-gateway",
+  "scripts": {
+    "postinstall": "graphql-codegen"
+  },
+  "dependencies": {
+    "@graphql-codegen/cli": "^1.7.0",
+    "@graphql-codegen/java": "1.7.0",
+    "graphql": "^14.5.7"
+  }
+}

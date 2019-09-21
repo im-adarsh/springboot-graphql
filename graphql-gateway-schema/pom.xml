@@ -57,6 +57,8 @@
       <artifactId>graphql-java-tools</artifactId>
       <version>5.2.4</version>
     </dependency>
+
+
   </dependencies>
 
   <build>

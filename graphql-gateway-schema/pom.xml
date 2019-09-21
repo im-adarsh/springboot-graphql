@@ -9,9 +9,9 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.clydoskope.graphql</groupId>
-  <artifactId>graphql-gateway-provider</artifactId>
+  <artifactId>graphql-gateway-schema</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>graphql-gateway-provider</name>
+  <name>graphql-gateway-schema</name>
 
   <properties>
     <java.version>1.8</java.version>

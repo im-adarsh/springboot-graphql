@@ -24,6 +24,7 @@
   <modules>
     <module>graphql-gateway-app</module>
     <module>graphql-gateway-provider</module>
+    <module>graphql-gateway-schema</module>
   </modules>
 
   <build>

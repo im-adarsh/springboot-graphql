@@ -61,6 +61,11 @@
       <artifactId>graphql-gateway-provider</artifactId>
       <version>${project.version}</version>
     </dependency>
+    <dependency>
+      <groupId>com.clydoskope.graphql</groupId>
+      <artifactId>graphql-gateway-schema</artifactId>
+      <version>${project.version}</version>
+    </dependency>
 
 
     <!-- to embed Altair tool -->

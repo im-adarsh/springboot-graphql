@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Component;
+import com.clydoskope.graphql.schema.demo.Types;
 
 @Component
 public class GraphQLDataFetchers {
@@ -38,8 +39,10 @@ public class GraphQLDataFetchers {
   );
 
   public DataFetcher getBookByIdDataFetcher() {
-    return dataFetchingEnvironment -> {
-      String bookId = dataFetchingEnvironment.getArgument("id");
+    return env -> {
+      Types.QueryBookByIdArgs args = new Types.QueryBookByIdArgs(env.getArguments());
+      String bookId = args.getId().toString();
+
       return books
           .stream()
           .filter(book -> book.get("id").equals(bookId))

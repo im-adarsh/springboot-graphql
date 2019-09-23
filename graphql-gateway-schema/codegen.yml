@@ -1,4 +1,4 @@
 schema: src/main/resources/graphql/demo/schema.graphql
 generates:
-  src/main/java/com/clydoskope/graphql/schema/demo/Book.java:
+  src/main/java/com/clydoskope/graphql/schema/demo/Types.java:
     - java

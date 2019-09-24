@@ -3,7 +3,6 @@ schema {
 }
 
 type Query {
-  # demo
   bookById(id: ID): Book
   getAllBooks: [Book]
 }

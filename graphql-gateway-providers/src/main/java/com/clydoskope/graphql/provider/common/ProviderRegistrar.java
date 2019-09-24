@@ -11,9 +11,7 @@ import graphql.schema.idl.TypeDefinitionRegistry;
 import java.io.IOException;
 import java.net.URL;
 import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
 
-@Component
 public abstract class ProviderRegistrar {
 
   private String graphqlSourcePath;

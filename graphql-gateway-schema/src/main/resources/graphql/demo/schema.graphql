@@ -1,3 +1,13 @@
+schema {
+  query: Query
+}
+
+type Query {
+  # demo
+  bookById(id: ID): Book
+  getAllBooks: [Book]
+}
+
 type Book {
   id: ID
   name: String

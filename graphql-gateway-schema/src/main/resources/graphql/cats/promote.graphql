@@ -1,0 +1,66 @@
+# Common card for all the promotion card
+interface Card {
+    # title of the card
+    title: String
+    # description of the promotion card
+    description: String
+    # cta of the promotion card
+    cta: String
+    # sort order of the promotion card
+    sort_order: Int
+    # is_purchase of the promotion card
+    is_purchasable : Boolean
+}
+
+type ProfilePromotionCard implements Card {
+    title: String
+    description: String
+    cta: String
+    sort_order: Int
+    is_purchasable : Boolean
+}
+
+type SpotlightCard implements Card {
+    title: String
+    description: String
+    cta: String
+    sort_order: Int
+    is_purchasable : Boolean
+}
+
+type BumpCard implements Card {
+    title: String
+    description: String
+    cta: String
+    sort_order: Int
+    is_purchasable : Boolean
+}
+
+type BumpSchedulerCard implements Card {
+    title: String
+    description: String
+    cta: String
+    sort_order: Int
+    is_purchasable : Boolean
+}
+
+type CarouBizCard implements Card {
+    title: String
+    description: String
+    cta: String
+    sort_order: Int
+    is_purchasable : Boolean
+}
+
+
+
+# One of the avail promotions
+enum PromotionType {
+    SPOTLIGHT,
+    SPOTLIGHT_POSTPAID,
+    BUMP,
+    BUMP_SCHEDULER,
+    PROFILE_PROMOTION,
+    CAROUBIZ,
+    PACKAGE_PROMOTION,
+}

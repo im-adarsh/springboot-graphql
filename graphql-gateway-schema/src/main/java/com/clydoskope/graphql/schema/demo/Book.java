@@ -2,7 +2,7 @@ package com.clydoskope.graphql.schema.demo;
 
 import java.util.Map;
 
-public class Types {
+public class Book {
   
   
   public static class QueryBookByIdArgs {

@@ -1,0 +1,12 @@
+schema {
+    query: Query
+}
+
+type Query {
+    # api to get the promotion page filtered by type
+    getPromotePage(userId: String, promotions: [PromotionType]): [Card]
+
+    # demo
+    bookById(id: ID): Book
+    getAllBooks: [Book]
+}

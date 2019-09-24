@@ -1,12 +1,3 @@
-schema {
-  query: Query
-}
-
-type Query {
-  bookById(id: ID): Book
-  getAllBooks: [Book]
-}
-
 type Book {
   id: ID
   name: String

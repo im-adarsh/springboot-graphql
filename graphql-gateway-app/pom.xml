@@ -58,8 +58,8 @@
     </dependency>
     <dependency>
       <groupId>com.clydoskope.graphql</groupId>
-      <artifactId>graphql-gateway-provider</artifactId>
-      <version>${project.version}</version>
+      <artifactId>graphql-gateway-providers</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.clydoskope.graphql</groupId>
@@ -68,26 +68,10 @@
     </dependency>
 
 
-    <!-- to embed Altair tool -->
-    <dependency>
-      <groupId>com.graphql-java-kickstart</groupId>
-      <artifactId>altair-spring-boot-starter</artifactId>
-      <version>5.10.0</version>
-      <scope>runtime</scope>
-    </dependency>
-
     <!-- to embed GraphiQL tool -->
     <dependency>
       <groupId>com.graphql-java-kickstart</groupId>
       <artifactId>graphiql-spring-boot-starter</artifactId>
-      <version>5.10.0</version>
-      <scope>runtime</scope>
-    </dependency>
-
-    <!-- to embed Voyager tool -->
-    <dependency>
-      <groupId>com.graphql-java-kickstart</groupId>
-      <artifactId>voyager-spring-boot-starter</artifactId>
       <version>5.10.0</version>
       <scope>runtime</scope>
     </dependency>

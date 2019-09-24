@@ -2,7 +2,8 @@ package com.clydoskope.graphql.app.graphqlgatewayapp;
 
 import static graphql.schema.idl.TypeRuntimeWiring.newTypeWiring;
 
-import com.clydoskope.graphql.app.graphqlgatewayapp.datafetcher.GraphQLDataFetchers;
+import com.clydoskope.graphql.cats.promote.summary.PromoteService;
+import com.clydoskope.graphql.demo.DemoService;
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
 import graphql.GraphQL;
@@ -29,11 +30,14 @@ public class GraphQLProvider {
   }
 
   @Autowired
-  GraphQLDataFetchers graphQLDataFetchers;
+  DemoService demoService;
+
+  @Autowired
+  PromoteService promoteService;
 
   @PostConstruct
   public void init() throws IOException {
-    URL url = Resources.getResource("graphql/demo/schema.graphql");
+    URL url = Resources.getResource("graphql/query.graphql");
     String sdl = Resources.toString(url, Charsets.UTF_8);
     GraphQLSchema graphQLSchema = buildSchema(sdl);
     this.graphQL = GraphQL.newGraphQL(graphQLSchema).build();
@@ -49,11 +53,13 @@ public class GraphQLProvider {
   private RuntimeWiring buildWiring() {
     return RuntimeWiring.newRuntimeWiring()
         .type(newTypeWiring("Query")
-            .dataFetcher("getAllBooks", graphQLDataFetchers.getAllBooks()))
+            .dataFetcher("getPromotePage", promoteService.getPromotionPage("")))
         .type(newTypeWiring("Query")
-            .dataFetcher("bookById", graphQLDataFetchers.getBookByIdDataFetcher()))
+            .dataFetcher("getAllBooks", demoService.getAllBooks()))
+        .type(newTypeWiring("Query")
+            .dataFetcher("bookById", demoService.getBookByIdDataFetcher()))
         .type(newTypeWiring("Book")
-            .dataFetcher("author", graphQLDataFetchers.getAuthorDataFetcher()))
+            .dataFetcher("author", demoService.getAuthorDataFetcher()))
         .build();
   }
 }
